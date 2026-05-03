@@ -71,7 +71,7 @@
   }
 
   .nav-logo img {
-    height: 44px;
+    height: 56px;
     width: auto;
   }
 
@@ -129,6 +129,7 @@
     position: relative;
     z-index: 2;
     max-width: 900px;
+    padding-top: 120px;
   }
 
   .hero-tag {
@@ -877,6 +878,202 @@
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.35s; }
   .reveal-delay-4 { transition-delay: 0.5s; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+
+    /* Hide custom cursor on touch */
+    .cursor { display: none; }
+    body { cursor: auto; }
+
+    /* NAV */
+    nav {
+      padding: 20px 24px;
+    }
+    .nav-logo img { height: 40px; }
+    .nav-links { display: none; }
+
+    /* HERO */
+    #hero {
+      padding: 0 24px 56px;
+      min-height: 100svh;
+    }
+    .hero-bg-text {
+      font-size: clamp(80px, 28vw, 140px);
+      left: 50%;
+    }
+    .hero-tag { font-size: 10px; }
+    .hero-title {
+      font-size: clamp(44px, 13vw, 72px);
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      max-width: 100%;
+    }
+    .hero-meta {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .scroll-hint { display: none; }
+
+    /* PROBLEM */
+    #problem {
+      padding: 72px 24px;
+    }
+    .problem-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+    .big-quote {
+      font-size: clamp(26px, 7vw, 40px);
+    }
+    .stat-row {
+      gap: 20px;
+    }
+    .stat-number { font-size: 36px; }
+    .problem-right p { font-size: 15px; }
+
+    /* PARTNERSHIP */
+    #partnership {
+      padding: 72px 24px;
+    }
+    .partnership-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .partnership-desc {
+      text-align: left;
+      max-width: 100%;
+    }
+    /* Replace SVG map with simple two-card layout on mobile */
+    .map-container {
+      height: auto;
+    }
+    .map-svg { display: none; }
+    .map-mobile {
+      display: flex !important;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .map-city-card {
+      background: rgba(245,242,237,0.04);
+      border-left: 2px solid var(--red);
+      padding: 24px;
+    }
+    .map-city-card:last-child {
+      border-left-color: var(--green);
+    }
+    .map-city-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .map-city-country {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245,242,237,0.35);
+      margin-bottom: 12px;
+    }
+    .map-city-desc {
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(245,242,237,0.5);
+    }
+    .map-city-desc strong {
+      display: block;
+      color: rgba(245,242,237,0.85);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    /* TIMELINE */
+    #timeline {
+      padding: 72px 24px;
+    }
+    .month-col {
+      grid-template-columns: 60px 1fr;
+    }
+    .month-name {
+      padding: 16px 10px 16px 16px;
+      font-size: 10px;
+    }
+    .month-event {
+      padding: 16px;
+      font-size: 12px;
+      gap: 8px;
+    }
+    .month-event strong { font-size: 12px; }
+    .month-tag { font-size: 8px; padding: 2px 7px; }
+
+    /* OUTPUTS */
+    #outputs {
+      padding: 72px 24px;
+    }
+    .outputs-grid {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+    .output-card {
+      padding: 36px 28px;
+    }
+    .output-number { font-size: 56px; }
+    .output-title { font-size: 26px; }
+    .output-desc { font-size: 13px; }
+
+    /* BERLIN */
+    #berlin {
+      min-height: auto;
+    }
+    .berlin-inner {
+      grid-template-columns: 1fr;
+    }
+    .berlin-left {
+      padding: 56px 24px;
+      gap: 32px;
+    }
+    .berlin-date {
+      font-size: clamp(56px, 18vw, 100px);
+    }
+    .berlin-right {
+      padding: 48px 24px 64px;
+    }
+    .berlin-right h2 {
+      font-size: clamp(32px, 9vw, 52px);
+    }
+    .berlin-right p { font-size: 14px; }
+    .program-list li { font-size: 13px; }
+    .berlin-tag {
+      font-size: 10px;
+      padding: 8px 14px;
+      margin-top: 6px;
+    }
+
+    /* CREDITS */
+    #credits {
+      padding: 56px 24px;
+    }
+    .credits-top {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .credits-logos {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .credits-project-title { font-size: 18px; }
+    .logo-tam img { height: 40px; }
+    .logo-iksf { height: 22px; }
+    .logo-aim { height: 56px; }
+  }
 </style>
 </head>
 <body>
@@ -1022,6 +1219,26 @@
           </foreignObject>
         </g>
       </svg>
+
+      <!-- Mobile fallback — hidden on desktop -->
+      <div class="map-mobile" style="display:none;">
+        <div class="map-city-card">
+          <div class="map-city-name">BERLIN</div>
+          <div class="map-city-country">Germany</div>
+          <div class="map-city-desc">
+            <strong>TAM Museum</strong>
+            A transcultural museum focused on the intertwined histories of Germany and Türkiye.
+          </div>
+        </div>
+        <div class="map-city-card">
+          <div class="map-city-name">İZMİR</div>
+          <div class="map-city-country">Türkiye</div>
+          <div class="map-city-desc">
+            <strong>İzmir Museum of Painting and Sculpture</strong>
+            A state museum with significant fine arts collections — a strong partner for examining how art history is collected and narrated.
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
